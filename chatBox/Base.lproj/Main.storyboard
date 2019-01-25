@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chatBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-qq-0dy">
+                                <rect key="frame" x="169" y="62" width="75" height="84"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Haz una pregunta" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVV-GP-4e4">
+                                <rect key="frame" x="44" y="267" width="350" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="agregarPregunta:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="83S-v1-FHY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q8k-ym-T1Q"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2m-CU-Jmo">
+                                <rect key="frame" x="176" y="364" width="63" height="30"/>
+                                <state key="normal" title="Pregunta"/>
+                                <connections>
+                                    <action selector="pregunta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNA-K3-KaI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Humano I'm questionBot, Ask me Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBi-a2-ivN">
+                                <rect key="frame" x="44" y="181" width="350" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aeM-qq-0dy" secondAttribute="trailing" constant="170" id="30r-qt-0KI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D2m-CU-Jmo" secondAttribute="bottom" constant="468" id="4BD-P5-NnA"/>
+                            <constraint firstItem="ZVV-GP-4e4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="AJh-vw-Oii"/>
+                            <constraint firstItem="aeM-qq-0dy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Iir-Kp-c0c"/>
+                            <constraint firstItem="D2m-CU-Jmo" firstAttribute="top" secondItem="ZVV-GP-4e4" secondAttribute="bottom" constant="67" id="KD2-EQ-fV3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZVV-GP-4e4" secondAttribute="trailing" constant="20" id="KI0-Fn-5Xs"/>
+                            <constraint firstItem="KBi-a2-ivN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="LAh-HL-69w"/>
+                            <constraint firstItem="KBi-a2-ivN" firstAttribute="top" secondItem="aeM-qq-0dy" secondAttribute="bottom" constant="35" id="PVI-ed-FOP"/>
+                            <constraint firstItem="ZVV-GP-4e4" firstAttribute="top" secondItem="KBi-a2-ivN" secondAttribute="bottom" constant="45" id="WN2-aJ-YfN"/>
+                            <constraint firstItem="D2m-CU-Jmo" firstAttribute="top" secondItem="ZVV-GP-4e4" secondAttribute="bottom" constant="67" id="bjl-kK-6IU"/>
+                            <constraint firstItem="aeM-qq-0dy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="g20-4e-Pgh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D2m-CU-Jmo" secondAttribute="trailing" constant="175" id="hnj-0r-Ob5"/>
+                            <constraint firstItem="ZVV-GP-4e4" firstAttribute="top" secondItem="KBi-a2-ivN" secondAttribute="bottom" constant="45" id="l8n-iv-XrT"/>
+                            <constraint firstItem="KBi-a2-ivN" firstAttribute="top" secondItem="aeM-qq-0dy" secondAttribute="bottom" constant="35" id="lH1-zY-OgW"/>
+                            <constraint firstItem="D2m-CU-Jmo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="u20-ur-6A8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KBi-a2-ivN" secondAttribute="trailing" constant="20" id="xgI-MB-4zT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="RespuestaRobot" destination="KBi-a2-ivN" id="JVJ-V7-e7B"/>
+                        <outlet property="editarTexto" destination="ZVV-GP-4e4" id="b9n-WC-rXf"/>
+                        <outlet property="preguntar" destination="D2m-CU-Jmo" id="JuE-fL-EPt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>
